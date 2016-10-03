@@ -16,5 +16,5 @@ function getAngle(time, separator) {
 	return Math.abs(m * 6 - (h * 30 + m * 0.5));
 }
 
-console.log('Угол: ' + getAngle('00:15', ':') + ' градусов');
+console.log('Угол: ' + getAngle('23:15', ':') + ' градусов');
 
