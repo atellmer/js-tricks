@@ -22,4 +22,4 @@ function getSum(a) {
 
 var sum = getSum(2)(5)(5, 10)(10, 3, 2)();
 
-console.log('sum:', sum); //20
+console.log('sum:', sum); //37
