@@ -32,11 +32,13 @@ function Observable() {
 				if (filtered.length === 0) {
 					callbacks.push(fn);
 				}
-				Array.prototype.forEach.call(iterable, function(v) {
-					callbacks.forEach(function(callback) {
-						callback(v);
-					});
-				});
+				for (var i in iterable) {
+					if (iterable.hasOwnProperty(i)) {
+						callbacks.forEach(function(callback) {
+							callback(iterable[i]);
+						});
+					}
+				}
 			}
 		}
 	}
