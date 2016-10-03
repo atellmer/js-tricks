@@ -2,7 +2,7 @@ var arr = [1, 3, -2, 5, 4];
 
 sortAscending(arr).forEach(function(v) {
 	console.log(v); 
-}); //отсортировано по ворастанию
+}); //отсортировано по возрастанию
 
 sortDescending(arr).forEach(function(v) {
 	console.log(v); 

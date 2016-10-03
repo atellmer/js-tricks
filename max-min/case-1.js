@@ -8,5 +8,5 @@ Array.prototype.getMin = function() {
   return Math.min.apply(null, this);
 };
 
-console.log(arr.getMax());
-console.log(arr.getMin());
+console.log(arr.getMax()); //8
+console.log(arr.getMin()); //0

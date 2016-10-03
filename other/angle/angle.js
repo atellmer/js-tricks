@@ -1,5 +1,3 @@
-'use strict'
-
 //угол между стрелками аналоговых часов по времени
 function getAngle(time, separator) {
 	var h = parseInt(time.split(separator)[0]);
