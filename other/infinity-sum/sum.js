@@ -1,7 +1,17 @@
 //Функция, принимающая любое количество аргументов и поддерживающая любое количество вызовов
-function getSum(a) {
+function getSum() {
 	var sum = 0;
-	sum += a;
+
+	var args = Array.prototype.map.call(arguments, function(v) {
+			return v;
+	});
+	if (args.length === 0) {
+		return sum;
+	} else {
+		args.forEach(function(v) {
+				sum += v;
+		});
+	}
 
 	function next() {
 		var args = Array.prototype.map.call(arguments, function(v) {
@@ -17,9 +27,10 @@ function getSum(a) {
 			return next;
 		}
 	}
+
 	return next;
 }
 
-var sum = getSum(2)(5)(5, 10)(10, 3, 2)();
+var sum = getSum(2, 3)(10)(5, 1)();
 
 console.log('sum:', sum); //37
