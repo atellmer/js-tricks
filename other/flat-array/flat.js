@@ -22,6 +22,6 @@ if (Array.prototype.flat !== 'function') {
 }
 
 var arr = [1, 2 , [{}, 4, ['hello world', 6, 7]], 8, 9];
-var flat = arr.flat();
+var flat = arr.flat(); //[ 1, 2, {}, 4, 'hello world', 6, 7, 8, 9 ]
 
 console.log(flat);
