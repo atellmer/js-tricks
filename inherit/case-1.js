@@ -1,5 +1,5 @@
 //Множественное наследование
-if (Object.prototype.extend === undefined) {
+if (typeof Object.prototype.extend === 'undefined') {
 	Object.prototype.extend = function() {
 		var self = this;
 		Array.prototype.forEach.call(arguments, function(Ctor) {
